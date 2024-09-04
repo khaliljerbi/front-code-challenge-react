@@ -8,7 +8,7 @@ import { SECTION_TYPE } from "@/types/enums/section-type.enum";
 const CardGrid = () => {
   const cardGrid = content.content.find((x) => x.type === SECTION_TYPE.CARD_GRID) as CardList;
   return (
-    <Stack gap="40px">
+    <Stack gap="40px" mt={{ base: "40px", md: "80px", xl: "120px" }}>
       <Text fontSize={[16, 20, 24]}>Lorem ipsum dolor sit amet</Text>
       <Grid
         gridTemplateAreas={{ base: `'C0' 'C1' 'C2''C3' 'C4' 'C5'`, md: `'C0 C1' 'C2 C3' 'C4 C5'` , xl: `'C0 C0 C1 C2''C3 C4 C5 C5'` }}

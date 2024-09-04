@@ -24,10 +24,10 @@ const Banner = () => {
       />
       <Box
         pos="absolute"
-        height={{ base: "250px", md: "380px", xl: "560px" }}
-        width={{ base: "120px", md: "200px", xl: "350px" }}
-        top={{ base: "-20px", md: "-40px" }}
-        left={{ base: "40px", md: "120px" }}
+        height={{ base: "300px", md: "380px", xl: "560px" }}
+        width={{ base: "180px", md: "200px", xl: "350px" }}
+        top={{ base: "-40px", md: "-40px" }}
+        left={{ base: "40px", md: "80px", xl: "120px" }}
       >
         <Image
           style={{ objectFit: "cover" }}
