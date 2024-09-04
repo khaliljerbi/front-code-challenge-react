@@ -37,7 +37,7 @@ const Banner = () => {
           priority
         />
       </Box>
-      <Stack pos="absolute" right={{ base: "25px", md: "40px" }} display="flex" justifyContent="center" height="100%">
+      <Stack pos="absolute" top={{ base: "20px", md: "40px" }} right={{ base: "25px", md: "40px" }} display="flex" justifyContent="center" height="100%">
         <Heading as="h1" fontSize={{ base: 20, md: 24, xl: 48 }} textAlign="right">
           {banner.title}
         </Heading>
