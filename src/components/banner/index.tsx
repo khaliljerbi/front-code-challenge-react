@@ -19,11 +19,12 @@ const Banner = () => {
         fill
         src={banner.backgroundAsset.url}
         alt={banner.backgroundAsset.alt}
+        priority
       />
       <Box
         pos="absolute"
         height={{ base: "250px", md: "380px", xl: "560px" }}
-        width={{ base: "150px", md: "280px", xl: "350px" }}
+        width={{ base: "120px", md: "200px", xl: "350px" }}
         top={{ base: "-20px", md: "-50px" }}
         left={{ base: "40px", md: "120px" }}
       >
@@ -32,9 +33,10 @@ const Banner = () => {
           fill
           src={banner.foregroundAsset.url}
           alt={banner.foregroundAsset.alt}
+          priority
         />
       </Box>
-      <Stack pos="absolute" top="20px" right="40px" display="flex" justifyContent="center" height="100%">
+      <Stack pos="absolute" right={{ base: "25px", md: "40px" }} display="flex" justifyContent="center" height="100%">
         <Text fontSize={{ base: 20, md: 24, xl: 48 }} textAlign="right">
           {banner.title}
         </Text>
