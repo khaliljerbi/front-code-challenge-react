@@ -4,11 +4,12 @@ import content from "@/data/index.json";
 import { CardItem, CardList } from "@/types/card.type";
 import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import Card from "./card";
+import { SECTION_TYPE } from "@/types/enums/section-type.enum";
 const CardGrid = () => {
-  const cardGrid = content.content.find((x) => x.type === "CARD_GRID") as CardList;
+  const cardGrid = content.content.find((x) => x.type === SECTION_TYPE.CARD_GRID) as CardList;
   return (
     <Stack gap="40px">
-      <Text fontSize={[16, 24, 32]}>Lorem ipsum dolor sit amet</Text>
+      <Text fontSize={[16, 20, 24]}>Lorem ipsum dolor sit amet</Text>
       <Grid
         gridTemplateAreas={{ base: `'C0' 'C1' 'C2''C3' 'C4' 'C5'`, md: `'C0 C1' 'C2 C3' 'C4 C5'` , xl: `'C0 C0 C1 C2''C3 C4 C5 C5'` }}
         gridAutoColumns="1fr"

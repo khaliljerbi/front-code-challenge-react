@@ -4,6 +4,7 @@ import Paragraph from "@/components/article/paragraph";
 import CaptionCarousel from "@/components/carousel";
 import article from "@/data/article.json";
 import { Stack } from "@chakra-ui/react";
+import { SECTION_TYPE } from "@/types/enums/section-type.enum";
 
 
 export const metadata: Metadata = {
@@ -13,10 +14,10 @@ export const metadata: Metadata = {
 
 const page = () => {
   const highlitedParagph = article.content.find(
-    (item) => item.type === "PARAGRAPH" && item.highlight
+    (item) => item.type === SECTION_TYPE.PARAGRAPH && item.highlight
   );
   const regularParagraph = article.content.find(
-    (item) => item.type === "PARAGRAPH" && !item.highlight
+    (item) => item.type === SECTION_TYPE.PARAGRAPH && !item.highlight
   );
   return (
     <Stack gap="80px">

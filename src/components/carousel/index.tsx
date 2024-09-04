@@ -13,6 +13,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 
 import article from '@/data/article.json';
+import { SECTION_TYPE } from "@/types/enums/section-type.enum";
 
 // Settings for the slider
 const settings = {
@@ -33,7 +34,7 @@ export default function CaptionCarousel() {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
-  const cards = article.content.find(item => item.type === "CAROUSEL")?.items as CarouselItem[];
+  const cards = article.content.find(item => item.type === SECTION_TYPE.CAROUSEL)?.items as CarouselItem[];
 
   return (
     <Box position={"relative"} width={"full"} overflow={"hidden"}>

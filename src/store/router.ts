@@ -17,12 +17,11 @@ export const useAsPath = () => {
   return asPathStore((state) => state);
 };
 
-/** use everywhere you like */
 export const getAsPath = () => {
   return asPathStore.getState();
 };
 
-/** Only use this in _app.tsx or root it's like a Provider */
+/** Only use this in root file or Provider */
 export const useAsPathInitializer = () => {
   const asPath = usePathname();
   const { currentAsPath } = useAsPath();

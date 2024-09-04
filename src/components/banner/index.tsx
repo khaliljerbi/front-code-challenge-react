@@ -2,11 +2,12 @@
 
 import content from "@/data/index.json";
 import { Banner as BannerType } from "@/types/banner.type";
-import { Box, Stack, Text } from "@chakra-ui/react";
+import { SECTION_TYPE } from "@/types/enums/section-type.enum";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const Banner = () => {
-  const banner = content.content.find((x) => x.type === "HERO") as BannerType;
+  const banner = content.content.find((x) => x.type === SECTION_TYPE.HERO) as BannerType;
   return (
     <Box
       pos="relative"
@@ -37,9 +38,10 @@ const Banner = () => {
         />
       </Box>
       <Stack pos="absolute" right={{ base: "25px", md: "40px" }} display="flex" justifyContent="center" height="100%">
-        <Text fontSize={{ base: 20, md: 24, xl: 48 }} textAlign="right">
+        <Heading as="h1" fontSize={{ base: 20, md: 24, xl: 48 }} textAlign="right">
           {banner.title}
-        </Text>
+        </Heading>
+        <Heading as="h2" fontSize={{ base: 14, md: 16, xl: 24 }} textAlign="right">{banner.subtitle}</Heading>
         <Text fontSize={{ base: 12, md: 16, xl: 20 }} textAlign="right">
           {banner.description}
         </Text>

@@ -1,0 +1,7 @@
+export enum SECTION_TYPE {
+  "HERO" = "HERO",
+  "CARD_GRID" = "CARD_GRID",
+  "HERO_ARTICLE" = "HERO_ARTICLE",
+  "PARAGRAPH" = "PARAGRAPH",
+  "CAROUSEL" = "CAROUSEL"
+}
