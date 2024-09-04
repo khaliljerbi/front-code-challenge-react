@@ -19,7 +19,7 @@ const page = () => {
   return (
     <Stack gap="80px">
       <Hero />
-      <Paragraph highlited text={highlitedParagph?.text as string} />
+      <Paragraph highlight text={highlitedParagph?.text as string} />
       <Paragraph text={regularParagraph?.text as string} />
       <CaptionCarousel />
       <Paragraph text={regularParagraph?.text as string} />

@@ -1,13 +1,11 @@
+import { ArticleParagraph } from "@/types/article.type";
 import { Container, Heading } from "@chakra-ui/react";
 import DOMPurify from "isomorphic-dompurify";
 
-interface ParagraphProps {
-  text: string;
-  highlited?: boolean;
-}
+interface ParagraphProps extends ArticleParagraph {}
 
-const Paragraph = ({ highlited, text }: ParagraphProps) => {
-  return highlited ? (
+const Paragraph = ({ highlight, text }: ParagraphProps) => {
+  return highlight ? (
     <Heading
       as="h1"
       fontSize={{ base: "xl", md: "2xl", xl: "3xl" }}

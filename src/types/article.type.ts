@@ -15,3 +15,16 @@ export interface ArticleHero {
     type: string;
   };
 }
+
+export interface CarouselItem {
+  url: string;
+  alt: string;
+  description: string;
+  type: string;
+}
+
+export interface ArticleParagraph {
+  text: string;
+  type?: string;
+  highlight?: boolean;
+}

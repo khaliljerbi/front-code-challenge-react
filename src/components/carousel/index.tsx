@@ -10,6 +10,9 @@ import {
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
 import Image from "next/image";
+import { CarouselItem } from "@/types/article.type";
+
+import article from '@/data/article.json';
 
 // Settings for the slider
 const settings = {
@@ -30,29 +33,7 @@ export default function CaptionCarousel() {
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
-  const cards = [
-    {
-      url: "https://placehold.co/1195x400/D1D3CA/D1D3CA",
-      alt: "carousel first item",
-      description:
-        "Aliquam malesuada velit nisl, quis porta massa bibendum ut. Pellentesque interdum purus felis, sit amet ullamcorper dolor mattis gravida. In non ullamcorper ex. Proin rutrum placerat tortor in sodales.",
-      type: "image",
-    },
-    {
-      url: "https://placehold.co/1195x400/D1D3CA/D1D3CA",
-      alt: "carousel second item",
-      description:
-        "Aliquam malesuada velit nisl, quis porta massa bibendum ut. Pellentesque interdum purus felis, sit amet ullamcorper dolor mattis gravida. In non ullamcorper ex. Proin rutrum placerat tortor in sodales.",
-      type: "image",
-    },
-    {
-      url: "https://placehold.co/1195x400/D1D3CA/D1D3CA",
-      alt: "carousel third item",
-      description:
-        "Aliquam malesuada velit nisl, quis porta massa bibendum ut. Pellentesque interdum purus felis, sit amet ullamcorper dolor mattis gravida. In non ullamcorper ex. Proin rutrum placerat tortor in sodales.",
-      type: "image",
-    },
-  ];
+  const cards = article.content.find(item => item.type === "CAROUSEL")?.items as CarouselItem[];
 
   return (
     <Box position={"relative"} width={"full"} overflow={"hidden"}>
