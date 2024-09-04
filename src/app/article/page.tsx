@@ -1,10 +1,15 @@
-"use client";
-
+import { Metadata } from "next";
 import Hero from "@/components/article/hero";
 import Paragraph from "@/components/article/paragraph";
 import CaptionCarousel from "@/components/carousel";
 import article from "@/data/article.json";
 import { Stack } from "@chakra-ui/react";
+
+
+export const metadata: Metadata = {
+  title: article.title,
+  keywords: article.keywords
+};
 
 const page = () => {
   const highlitedParagph = article.content.find(
