@@ -1,8 +1,8 @@
 "use client";
 
-import { Box, Button, Flex, Img, Stack, Text } from "@chakra-ui/react";
-import { Link } from "@chakra-ui/next-js";
 import { CardItem } from "@/types/card.type";
+import { Link } from "@chakra-ui/next-js";
+import { Box, Flex, Img, Stack, Text } from "@chakra-ui/react";
 
 interface ICardProps extends CardItem {}
 

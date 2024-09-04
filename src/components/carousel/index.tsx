@@ -1,16 +1,16 @@
 "use client";
 
-import React from "react";
 import {
   Box,
   IconButton,
-  useBreakpointValue,
-  Text
+  Text,
+  useBreakpointValue
 } from "@chakra-ui/react";
+import { useState } from "react";
 // And react-slick as our Carousel Lib
-import Slider from "react-slick";
-import Image from "next/image";
 import { CarouselItem } from "@/types/article.type";
+import Image from "next/image";
+import Slider from "react-slick";
 
 import article from '@/data/article.json';
 
@@ -28,7 +28,7 @@ const settings = {
 };
 
 export default function CaptionCarousel() {
-  const [slider, setSlider] = React.useState<Slider | null>(null);
+  const [slider, setSlider] = useState<Slider | null>(null);
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });

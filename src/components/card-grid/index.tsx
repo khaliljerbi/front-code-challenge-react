@@ -1,9 +1,9 @@
 'use client'
 
-import { Stack, Grid, GridItem, Text } from "@chakra-ui/react";
 import content from "@/data/index.json";
-import Card from "./card";
 import { CardItem, CardList } from "@/types/card.type";
+import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
+import Card from "./card";
 const CardGrid = () => {
   const cardGrid = content.content.find((x) => x.type === "CARD_GRID") as CardList;
   return (
