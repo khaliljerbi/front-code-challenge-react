@@ -23,7 +23,7 @@ const Hero = () => {
           <Stack
             pos="absolute"
             top="50%"
-            right="40px"
+            right={{ base: "20px", md: "40px" }}
             transform="translateY(-50%)"
             maxW="459px"
             color="white"

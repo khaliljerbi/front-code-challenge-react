@@ -86,9 +86,9 @@ export default function CaptionCarousel() {
             <Text
               pos="absolute"
               top="60%"
-              right={{ base: "0", md: "80px", xl: "120px" }}
-              maxW="580px"
-              fontSize={{ base: "md", lg: "lg" }}
+              right={{ base: "20px", md: "80px", xl: "120px" }}
+              maxW={{ base: "300px", xl: "580px" }}
+              fontSize={{ base: "sm", lg: "lg" }}
               color="black.500"
             >
               {card.description}

@@ -23,9 +23,9 @@ const Banner = () => {
       <Box
         pos="absolute"
         height={{ base: "300px", md: "380px", xl: "560px" }}
-        width={{ base: "180px", md: "200px", xl: "350px" }}
+        width={{ base: "150px", md: "200px", xl: "350px" }}
         top={{ base: "-40px", md: "-40px" }}
-        left={{ base: "40px", md: "80px", xl: "120px" }}
+        left={{ base: "30px", md: "80px", xl: "120px" }}
       >
         <Image
           style={{ objectFit: "cover" }}
