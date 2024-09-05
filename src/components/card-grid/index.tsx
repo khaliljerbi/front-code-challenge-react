@@ -1,12 +1,11 @@
 'use client'
 
-import content from "@/data/index.json";
-import { CardItem, CardList } from "@/types/card.type";
+import { CardItem } from "@/types/card.type";
 import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import Card from "./card";
-import { SECTION_TYPE } from "@/types/enums/section-type.enum";
+import { useCardGrid } from "@/hooks/useCardGrid";
 const CardGrid = () => {
-  const cardGrid = content.content.find((x) => x.type === SECTION_TYPE.CARD_GRID) as CardList;
+  const { cardGrid } = useCardGrid()
   return (
     <Stack gap="40px" mt={{ base: "40px", md: "80px", xl: "120px" }}>
       <Text fontSize={[16, 20, 24]}>Lorem ipsum dolor sit amet</Text>

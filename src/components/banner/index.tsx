@@ -1,13 +1,11 @@
 "use client";
 
-import content from "@/data/index.json";
-import { Banner as BannerType } from "@/types/banner.type";
-import { SECTION_TYPE } from "@/types/enums/section-type.enum";
+import { useBanner } from "@/hooks/useBanner";
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const Banner = () => {
-  const banner = content.content.find((x) => x.type === SECTION_TYPE.HERO) as BannerType;
+  const { banner } = useBanner()
   return (
     <Box
       pos="relative"

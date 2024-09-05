@@ -2,16 +2,12 @@
 
 import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 
-import article from "@/data/article.json";
-import { ArticleHero } from "@/types/article.type";
 import Image from "next/image";
-import { SECTION_TYPE } from "@/types/enums/section-type.enum";
+import { useArticleHero } from "@/hooks/useArticleHero";
 
 const Hero = () => {
   
-  const hero = article.content.find(
-    (item) => item.type === SECTION_TYPE.HERO_ARTICLE
-  ) as ArticleHero;
+  const { hero } = useArticleHero()
 
   return (
     <Box>
