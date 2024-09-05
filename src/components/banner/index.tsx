@@ -1,6 +1,6 @@
 "use client";
 
-import { useBanner } from "@/hooks/useBanner";
+import { useBanner } from "@/hooks/banner";
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 

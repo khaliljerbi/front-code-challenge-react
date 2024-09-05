@@ -13,7 +13,7 @@ const Paragraph = ({ highlight, text }: ParagraphProps) => {
       dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text as string) }}
     />
   ) : (
-    <Container maxW={{ base: "300px", md: "600px", xl: "954px" }}>
+    <Container maxW={{ base: "450px", md: "600px", xl: "954px" }}>
       <Heading
         as="h6"
         size={{ base: "xs", md: "sm", xl: "md" }}
